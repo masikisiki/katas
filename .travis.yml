@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: "masikisiki-githib"
     token:
-      secure: b2e5a5d23ffef76eb4accc3dac90c7e14655b11a
+      secure: ${SONAR_TOKEN}
 before_install:
   - chmod +x mvnw
 script: ./mvnw clean verify sonar:sonar
