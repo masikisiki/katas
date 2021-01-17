@@ -9,3 +9,7 @@ addons:
 before_install:
   - chmod +x mvnw
 script: ./mvnw clean verify sonar:sonar
+cache:
+  directories:
+    - $HOME/.m2/repository
+    - $HOME/.sonar/cache
