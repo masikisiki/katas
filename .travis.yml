@@ -1,6 +1,11 @@
 language: java
 jdk:
   - openjdk11
+addons:
+  sonarcloud:
+    organization: "masikisiki-githib"
+    token:
+      secure: b2e5a5d23ffef76eb4accc3dac90c7e14655b11a
 before_install:
   - chmod +x mvnw
-script: ./mvnw clean verify
+script: ./mvnw clean verify sonar:sonar
