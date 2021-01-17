@@ -9,23 +9,23 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DenominatorTest {
+class DenominatorTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"1,2", "1,2,3", "1,2,3,4"})
-    public void givenNoDenominatorReturnMinust1(String input) {
+    void givenNoDenominatorReturnMinust1(String input) {
         //arrange
         var array = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
         //act
         var sut = new Denominator();
         //assert
         var result = sut.solution(array);
-        assertEquals( -1,result);
+        assertEquals(-1, result);
     }
 
     @ParameterizedTest
     @CsvSource(value = {"1,2,4,2,2:1", "1,3,4,2,3,3,1,3,3,3:1", "1,5,5,5,5,1:1"}, delimiter = ':')
-    public void givenOnlyOneNumberIsDenominatorReturnNumber(String input, int expeced) {
+    void givenOnlyOneNumberIsDenominatorReturnNumber(String input, int expeced) {
         //arrange
         var array = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
         //act
