@@ -3,7 +3,7 @@ jdk:
   - openjdk11
 addons:
   sonarcloud:
-    organization: "masikisiki_katas"
+    organization: "masikisiki"
 #    token:
 #      secure: ${SONAR_TOKEN}
 before_install:
