@@ -1,5 +1,6 @@
 package za.co.sikza.apps.katas;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -8,6 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class DenominatorTest {
 
@@ -33,5 +35,10 @@ class DenominatorTest {
         //assert
         var result = sut.solution(array);
         assertEquals(result, expeced);
+    }
+
+    @Test
+    void testFail(){
+        fail();
     }
 }
